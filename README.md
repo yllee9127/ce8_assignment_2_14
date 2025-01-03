@@ -32,6 +32,7 @@ b. Create an AWS Lambda function that will be triggered by SQS DLQ activities. T
 Below is the sample Lambda function:
 
 import boto3
+
 client = boto3.client('sns')
 
 def lambda_handler(event, context):
