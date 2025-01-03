@@ -27,6 +27,7 @@ Answer:
 Follow the following steps:
    
 a. Create an AWS SNS Topic and SNS subscription and configure Protocol as Email and Endpoint as email address in the subscription. 
+
 b. Create an AWS Lambda function that will be triggered by SQS DLQ activities. The Lambda function will point to the SNS Topic ARN to send pre-configured email if there are messages added to the DLQ.
 Below is the sample Lambda function:
 
