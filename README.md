@@ -44,5 +44,14 @@ def lambda_handler(event, context):
   return(response)
 
 
+The following permissions are required by the AWS Lambda function IAM execution role:
+
+i. AWSLambdaBasicExecutionRole
+
+ii. AWSLambdaSQSQueueExecutionRole
+
+iii. SNS Publish permission
+
+
 c. Configure Lambda function trigger in the SQS DLQ and point to the Lambda function created in the above step.
    
