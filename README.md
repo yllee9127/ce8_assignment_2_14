@@ -35,9 +35,13 @@ import boto3
 client = boto3.client('sns')
 
 def lambda_handler(event, context):
+
   response = client.publish(TopicArn='<SNS-topic-arn>',Message="DLQ has a new message")
+
   print("A message has just been added to DLQ")
+  
   return(response)
+
 
 c. Configure Lambda function trigger in the SQS DLQ and point to the Lambda function created in the above step.
    
