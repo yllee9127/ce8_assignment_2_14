@@ -37,7 +37,7 @@ client = boto3.client('sns')
 
 def lambda_handler(event, context):
 
-  response = client.publish(TopicArn='<SNS-topic-arn>',Message="DLQ has a new message")
+  response = client.publish(TopicArn='SNS-topic-arn',Message="DLQ has a new message")
 
   print("A message has just been added to DLQ")
   
